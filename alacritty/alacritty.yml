@@ -9,5 +9,34 @@ window:
 font:
   normal:
     family: "CommitMono Nerd Font"
-    style: Bold 
+    style: Bold
   size: 14.0
+
+
+
+
+colors:
+  primary:
+    background: '0x121212'  # soft black
+    foreground: '0xC0CAF5'  # default text
+
+  normal:
+    black:   '0x121212'
+    red:     '0xD27B7B'     # faded red for directory
+    green:   '0x7FFFD4'     # cyanish green for host/machine
+    blue:    '0x4169E1'     # royal blue for user
+    yellow:  '0xE0AF68'
+    magenta: '0xBB9AF7'
+    cyan:    '0x7DCFFF'
+    white:   '0xC0CAF5'
+
+  bright:
+    black:   '0x414868'
+    red:     '0xD27B7B'
+    green:   '0x7FFFD4'
+    blue:    '0x4169E1'
+    yellow:  '0xE0AF68'
+    magenta: '0xBB9AF7'
+    cyan:    '0x7DCFFF'
+    white:   '0xC0CAF5'
+
