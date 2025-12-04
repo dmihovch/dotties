@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+mkdir -p ~/.config/i3 ~/.config/alacritty ~/.config/rofi ~/.config/picom ~/.config/nitrogen ~/.config/zed
+
+ln -sfn ~/dotfiles/i3/config ~/.config/i3/config
+ln -sfn ~/dotfiles/i3blocks/config ~/.config/i3blocks/config
+ln -sfn ~/dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -sfn ~/dotfiles/nitrogen ~/.config/nitrogen
+ln -sfn ~/dotfiles/picom/picom.conf ~/.config/picom/picom.conf
+ln -sfn ~/dotfiles/zed ~/.config/zed

@@ -1,0 +1,13 @@
+window:
+  padding:
+    x: 6
+    y: 6
+  dynamic_title: true
+  decorations: none
+  opacity: 0.9
+
+font:
+  normal:
+    family: "CommitMono Nerd Font"
+    style: Bold 
+  size: 14.0
