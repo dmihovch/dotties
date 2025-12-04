@@ -10,6 +10,12 @@ command=sh -c "free -h | awk '/Mem/ {print \$3\"/\"\$2}'"
 interval=5
 color=#50fa7b
 
+[gpu]
+label=GPU:
+command=sh -c "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader"
+interval=5
+color=#fa50fa
+
 [net]
 label=NET:
 command=sh -c "ip -brief addr show | awk '/^e/ {print \$1 \":\" \$3}'"
