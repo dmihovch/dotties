@@ -4,20 +4,20 @@ window:
     y: 6
   dynamic_title: true
   decorations: none
-  opacity: 0.9
+  opacity: 1
 
 font:
   normal:
-    family: "CommitMono Nerd Font"
-    style: Bold
-  size: 14.0
+    family: "Iosevka Term"
+    style: Extended 
+  size: 16.0
 
 
 
 
 colors:
   primary:
-    background: '0x121212'  # soft black
+    background: '0x050505'  # soft black
     foreground: '0xC0CAF5'  # default text
 
   normal:
