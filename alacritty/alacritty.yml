@@ -4,7 +4,7 @@ window:
     y: 10
   dynamic_title: true
   decorations: none
-  opacity: 0.85
+  opacity: 1
 
 font:
   normal:

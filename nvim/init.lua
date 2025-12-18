@@ -73,27 +73,27 @@ vim.o.confirm = true
 
 -- keep truecolor
 vim.opt.termguicolors = true
-
--- make Neovim transparent
-local function transparent()
-  vim.cmd([[
-    highlight Normal       guibg=NONE ctermbg=NONE
-    highlight NormalNC     guibg=NONE ctermbg=NONE
-    highlight EndOfBuffer  guibg=NONE ctermbg=NONE
-    highlight LineNr       guibg=NONE ctermbg=NONE
-    highlight SignColumn   guibg=NONE ctermbg=NONE
-    highlight FoldColumn   guibg=NONE ctermbg=NONE
-  ]])
-end
-
--- apply now
-transparent()
-
--- re-apply after colorscheme changes
-vim.api.nvim_create_autocmd("ColorScheme", {
-  callback = transparent,
-})
-
+--
+-- -- make Neovim transparent
+-- local function transparent()
+--   vim.cmd([[
+--     highlight Normal       guibg=NONE ctermbg=NONE
+--     highlight NormalNC     guibg=NONE ctermbg=NONE
+--     highlight EndOfBuffer  guibg=NONE ctermbg=NONE
+--     highlight LineNr       guibg=NONE ctermbg=NONE
+--     highlight SignColumn   guibg=NONE ctermbg=NONE
+--     highlight FoldColumn   guibg=NONE ctermbg=NONE
+--   ]])
+-- end
+--
+-- -- apply now
+-- transparent()
+--
+-- -- re-apply after colorscheme changes
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+--   callback = transparent,
+-- })
+--
 
 
 
