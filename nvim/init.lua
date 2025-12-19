@@ -1,13 +1,24 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.g.have_nerd_font = true
+-- Disable banner at the top
+vim.g.netrw_banner = 0
+
+-- Open directories in the same window
+vim.g.netrw_browse_split = 0
+
+-- Show files in a tree-like list (0=plain, 1=thin tree, 2=long, 3=tree view)
+vim.g.netrw_liststyle = 3
+
+-- Set netrw window width
+vim.g.netrw_winsize = 25
 vim.o.number = true
 --  Experiment for yourself to see if you like it!
 vim.o.relativenumber = true
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.guifontwide = '' -- Don't show the mode, since it's already in the status line
 
-vim.o.showmode = false
+vim.o.showmode = true
 
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
@@ -117,6 +128,11 @@ vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 --
 --
 --
+-- Open netrw in current directory
+vim.keymap.set('n', '<leader>e', ':Explore<CR>', { desc = 'Open file explorer' })
+
+-- Navigate up a directory
+vim.keymap.set('n', '<leader>E', ':Lexplore<CR>', { desc = 'Open file explorer (left)' })
 --
 --
 --
@@ -658,6 +674,7 @@ require('lazy').setup({
     },
   },
 
+{ 'prichrd/netrw.nvim', opts = {}, },
   { -- You can easily change to a different colorscheme.
 
     'navarasu/onedark.nvim',

@@ -8,9 +8,12 @@ window:
 
 font:
   normal:
-    family: "UbuntuMono"
-    style: Normal 
+    family: "JetBrainsMono Nerd Font"
+    style: SemiBold
   size: 18.0
+  offset:
+    x: 1
+    y: 1
 
 
 
