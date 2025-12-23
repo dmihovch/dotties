@@ -1,0 +1,41 @@
+# --- Backend Settings ---
+backend = "glx";
+vsync = true;
+glx-copy-from-front = false;
+
+# --- Rounded Corners ---
+corner-radius = 12;  # Adjust for more/less rounding
+rounded-corners-exclude = [
+  "window_type = 'dock'",
+  "window_type = 'desktop'"
+];
+
+# --- Animations (Pijulius specific) ---
+animations = true;
+animation-stiffness = 300.0;
+animation-damping = 35.0;
+animation-clamping = true;
+animation-mass = 1.0;
+animation-for-open-window = "zoom"; 
+animation-for-menu-window = "slide-down";
+animation-for-transient-window = "slide-up";
+
+# --- Shadows ---
+shadow = true;
+shadow-radius = 12;
+shadow-opacity = 0.5;
+shadow-offset-x = -7;
+shadow-offset-y = -7;
+shadow-exclude = [
+  "name = 'Notification'",
+  "class_g = 'Conky'",
+  "class_g ?= 'Notify-osd'",
+  "class_g = 'Cairo-clock'",
+  "_GTK_FRAME_EXTENTS@:c"
+];
+
+# --- Fading ---
+fading = true;
+fade-in-step = 0.03;
+fade-out-step = 0.03;
+fade-delta = 5;
