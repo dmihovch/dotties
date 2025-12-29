@@ -688,17 +688,43 @@ require('lazy').setup({
   },
 
 { 'prichrd/netrw.nvim', opts = {}, },
-  { -- You can easily change to a different colorscheme.
 
-    'navarasu/onedark.nvim',
-    priority = 1000, -- make sure to load this before all the other start plugins
-    config = function()
-      require('onedark').setup {
-        style = 'warmer',
-      }
-      require('onedark').load()
-    end,
+
+
+
+
+
+-- MY COLORSCHEME, I SHOULD PROBABLY BREAK TS UP TO DIFFERENT FILES SOON!
+
+
+
+
+  -- { -- You can easily change to a different colorscheme.
+  --
+  --   'navarasu/onedark.nvim',
+  --   priority = 1000, -- make sure to load this before all the other start plugins
+  --   config = function()
+  --     require('onedark').setup {
+  --       style = 'warmer',
+  --     }
+  --     require('onedark').load()
+  --   end,
+  -- },
+
+  {
+    "olimorris/onedarkpro.nvim",
+    lazy=false,
+    priority = 1000, -- Ensure it loads first
   },
+
+
+
+
+
+
+
+-- END COLORSCHEME
+
 
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
@@ -795,5 +821,9 @@ require('lazy').setup({
   },
 })
 
+
+-- Lua initialization file
+--SET COLORSCHEME
+vim.cmd("colorscheme onedark_dark")
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
