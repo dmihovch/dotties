@@ -8,3 +8,4 @@ ln -sfn ~/dotfiles/nitrogen ~/.config/nitrogen
 ln -sfn ~/dotfiles/picom/picom.conf ~/.config/picom/picom.conf
 ln -sfn ~/dotfiles/zed ~/.config/zed
 ln -sfn ~/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
+ln -sfn ~/dotfiles/.bashrc ~/.bashrc
