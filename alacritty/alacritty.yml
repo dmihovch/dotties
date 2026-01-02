@@ -20,7 +20,7 @@ font:
 
 colors:
   primary:
-    background: '0x0F0F0F'  # soft black
+    background: '0x000000'  # soft black
     foreground: '0xC0CAF5'  # default text
 
   normal:
