@@ -514,9 +514,8 @@ require('lazy').setup({
         clangd = {},
         gopls = {},
         pyright = {},
-                ts_ls = {},
-        --
-
+        ts_ls = {},
+		jdtls = {},
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
