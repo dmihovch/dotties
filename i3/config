@@ -34,30 +34,11 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# # Use pactl to adjust volume in PulseAudio.
-# set $refresh_i3status killall -SIGUSR1 i3status
-# bindsym  exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-# bindsym $mod+F11 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
-# bindsym $mod+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-#
-
-# Path to volume control, without trailing slash
-set $volumepath ~/Apps/i3-volume
-
-# Command for the status line
-#   ie: i3blocks, i3status
-set $statuscmd i3blocks
-
-# Signal used to update the status line
-#   i3blocks uses SIGRTMIN+10 by default
-#   i3status uses SIGUSR1 by default
-set $statussig SIGRTMIN+10
-
-# Volume control keybindings
-bindsym $mod+F12 exec --no-startup-id $volumepath/volume -n -t $statuscmd -u $statussig up 5
-bindsym $mod+F11 exec --no-startup-id $volumepath/volume -n -t $statuscmd -u $statussig down 5
-bindsym $mod+m exec --no-startup-id $volumepath/volume -n -t $statuscmd -u $statussig mute
-
+ # Use pactl to adjust volume in PulseAudio.
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym $mod+F12 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym $mod+F11 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+bindsym $mod+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
