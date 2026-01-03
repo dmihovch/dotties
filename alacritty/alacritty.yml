@@ -3,7 +3,7 @@ window:
     x: 10
     y: 10
   dynamic_title: true
-  decorations: none
+  # decorations: none
   opacity: 1
 
 font:
@@ -11,9 +11,9 @@ font:
     family: "JetBrainsMono Nerd Font"
     style: SemiBold
   size: 18.0
-  offset:
-    x: 1
-    y: 1
+  # offset:
+    # x: 1
+    # y: 1
 
 
 
