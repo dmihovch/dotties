@@ -3,7 +3,7 @@ vim.g.maplocalleader = ' '
 vim.g.have_nerd_font = true
 -- Disable banner at the top
 vim.g.netrw_banner = 0
-
+	
 -- Open directories in the same window
 vim.g.netrw_browse_split = 0
 
@@ -821,3 +821,14 @@ require('lazy').setup({
 vim.cmd("colorscheme onedark_dark")
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+
+
+vim.api.nvim_create_autocmd('CursorMovedI', {
+  callback = function()
+    local luasnip = require('luasnip')
+    if luasnip.session.current_nodes[vim.api.nvim_get_current_buf()] and not luasnip.in_snippet() then
+      luasnip.unlink_current()
+    end
+  end,
+})
