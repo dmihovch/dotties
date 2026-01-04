@@ -72,7 +72,7 @@ vim.opt.tabstop = 4 -- visual width of a tab
 vim.opt.shiftwidth = 4 -- indent level = 1 tab
 vim.opt.softtabstop = 4 -- <Tab> inserts one tab
 -- Show which line your cursor is on
-vim.o.cursorline = true
+vim.o.cursorline = false
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.o.scrolloff = 10
@@ -85,8 +85,8 @@ vim.o.confirm = true
 
 -- keep truecolor
 vim.opt.termguicolors = true
---
--- -- make Neovim transparent
+-- --
+-- -- -- make Neovim transparent
 -- local function transparent()
 --   vim.cmd([[
 --     highlight Normal       guibg=NONE ctermbg=NONE
@@ -99,9 +99,9 @@ vim.opt.termguicolors = true
 -- end
 --
 -- -- apply now
--- transparent()
---
--- -- re-apply after colorscheme changes
+--  transparent()
+-- --
+-- -- -- re-apply after colorscheme changes
 -- vim.api.nvim_create_autocmd("ColorScheme", {
 --   callback = transparent,
 -- })
@@ -719,6 +719,16 @@ require('lazy').setup({
 -- END COLORSCHEME
 
 
+{
+    'tribela/transparent.nvim',
+    event = 'VimEnter',
+    config = true,
+},
+
+
+
+
+
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
@@ -765,6 +775,9 @@ require('lazy').setup({
       modes = { insert = true, command = false, terminal = false },
     },
   },
+
+
+
 
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
