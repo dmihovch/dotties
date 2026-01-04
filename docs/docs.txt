@@ -1,0 +1,8 @@
+Programs I need
+
+Bash >5
+i3
+polybar
+picom
+neovim >11
+
