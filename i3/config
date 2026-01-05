@@ -178,8 +178,9 @@ client.urgent           #bf616a #bf616a #eceff4 #bf616a
 
 default_floating_border normal
 
-# gaps inner 10
-# gaps outer 5
-# smart_gaps on
+ gaps inner 10
+ gaps outer 5
+ # smart_gaps on
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+
