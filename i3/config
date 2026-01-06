@@ -9,7 +9,11 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+
+# on the crappy white split keyboard, Mod1 was alt, and Mod4? was the windows key
+# on keychron, Mod1 is windows key, Mod4 is alt
+
+set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
