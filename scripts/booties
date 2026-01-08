@@ -9,6 +9,7 @@ ln -sfn ~/dotfiles/zed ~/.config/zed
 ln -sfn ~/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
 ln -sfn ~/dotfiles/polybar/config.ini ~/.config/polybar/config.ini
 ln -sfn ~/dotfiles/polybar/launch.sh ~/.config/polybar/launch.sh
+ln -sfn ~/dotfiles/rofi/config.rasi ~/.config/rofi/config.rasi
 ln -sfn ~/dotfiles/.bashrc ~/.bashrc
 
 
