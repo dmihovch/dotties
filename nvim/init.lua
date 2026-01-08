@@ -428,14 +428,15 @@ require('lazy').setup({
 
 -- MY COLORSCHEME, I SHOULD PROBABLY BREAK TS UP TO DIFFERENT FILES SOON!
 
-  {
-    "olimorris/onedarkpro.nvim",
-    lazy=false,
-    priority = 1000,
-  },
+  -- {
+  --   "olimorris/onedarkpro.nvim",
+  --   lazy=false,
+  --   priority = 1000,
+  -- },
+{ "ellisonleao/gruvbox.nvim", lazy=false, priority = 1000 , },
 
+-- { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 -- END COLORSCHEME
-
 
 {
     'tribela/transparent.nvim',
@@ -505,7 +506,7 @@ require('lazy').setup({
 
 
 --SET COLORSCHEME
-vim.cmd("colorscheme onedark_dark")
+vim.cmd("colorscheme gruvbox")
 
 
 
