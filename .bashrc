@@ -31,7 +31,7 @@ PS1="${BOLD}${USER_COLOR}\u${RESET}${PROMPT_COLOR}@${HOST_COLOR}\h${RESET}:${PAT
 
 # Enable GNU ls colors
 eval "$(dircolors -b)"
-alias ls='ls --color=auto'
+alias ls='lsd'
 alias v='nvim .'
 
 # macOS BSD ls colors
