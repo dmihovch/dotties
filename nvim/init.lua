@@ -443,11 +443,10 @@ require('lazy').setup({
 					operators=false,
 					emphasis=false,
 				},
+				contrast="hard"
 			})
 	end,
 },
-
--- { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 -- END COLORSCHEME
 {
     'tribela/transparent.nvim',
