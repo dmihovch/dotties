@@ -33,7 +33,7 @@ vim.opt.expandtab = false -- keep real tabs
 vim.opt.tabstop = 4 -- visual width of a tab
 vim.opt.shiftwidth = 4 -- indent level = 1 tab
 vim.opt.softtabstop = 4 -- <Tab> inserts one tab
-vim.o.cursorline = false
+vim.o.cursorline = true
 vim.o.scrolloff = 10
 vim.o.confirm = true
 vim.opt.termguicolors = true
@@ -433,11 +433,22 @@ require('lazy').setup({
   --   lazy=false,
   --   priority = 1000,
   -- },
-{ "ellisonleao/gruvbox.nvim", lazy=false, priority = 1000 , },
+{ "ellisonleao/gruvbox.nvim", lazy=false, priority = 1000 ,
+	config=function()
+		require("gruvbox").setup({
+				italic={
+					strings=false,
+					folds=true;
+					comments=false,
+					operators=false,
+					emphasis=false,
+				},
+			})
+	end,
+},
 
 -- { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 -- END COLORSCHEME
-
 {
     'tribela/transparent.nvim',
     event = 'VimEnter',
