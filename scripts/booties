@@ -12,7 +12,8 @@ ln -sfn ~/dotfiles/polybar/launch.sh ~/.config/polybar/launch.sh
 ln -sfn ~/dotfiles/rofi/config.rasi ~/.config/rofi/config.rasi
 ln -sfn ~/dotfiles/.bashrc ~/.bashrc
 
-
+# stuff that is only for my desktop, and not the laptop
+ln -sfn ~/dotfiles/.screenlayout/dual_monitors.sh ~/.screenlayout/dual_monitors.sh
 
 
 # ln -sfn ~/dotfiles/i3blocks/config ~/.config/i3blocks/config
