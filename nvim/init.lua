@@ -318,6 +318,7 @@ require('lazy').setup({
         gopls = {},
         pyright = {},
         ts_ls = {},
+		html = {},
 		jdtls = {},
         lua_ls = {
           settings = {

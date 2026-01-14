@@ -1,0 +1,10 @@
+
+[Unit]
+Description=Enable Redshift Night Mode at 20:00
+
+[Timer]
+OnCalendar=*-*-* 20:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

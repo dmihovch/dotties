@@ -54,3 +54,6 @@ shopt -s autocd
 
 
 
+
+# opencode
+export PATH=/home/dan/.opencode/bin:$PATH
