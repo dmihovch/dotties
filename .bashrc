@@ -53,7 +53,6 @@ shopt -s cdspell
 shopt -s autocd
 
 
+alias clip="xclip -selection clipboard"
+alias nitelite="redshift -b 1.0:0.9 -m randr -O 4000"
 
-
-# opencode
-export PATH=/home/dan/.opencode/bin:$PATH

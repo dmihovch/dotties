@@ -1,6 +1,0 @@
-[Unit]
-Description=Redshift Day Mode
-
-[Service]
-Type=oneshot
-ExecStart=/usr/bin/redshift -x -m randr

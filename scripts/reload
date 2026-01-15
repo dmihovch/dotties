@@ -1,17 +1,19 @@
 #!/usr/bin/env bash
-mkdir -p ~/.config/i3 ~/.config/alacritty ~/.config/rofi ~/.config/picom ~/.config/nitrogen ~/.config/zed ~/.config/nvim
+mkdir -p ~/.config/i3 ~/.config/alacritty ~/.config/rofi ~/.config/picom ~/.config/nitrogen ~/.config/nvim ~/.config/redshift ~/.config/polybar/
 
 ln -sfn ~/dotfiles/i3/config ~/.config/i3/config
 ln -sfn ~/dotfiles/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
 ln -sfn ~/dotfiles/nitrogen/nitrogen.cfg ~/.config/nitrogen/nitrogen.cfg
 ln -sfn ~/dotfiles/picom/picom.conf ~/.config/picom/picom.conf
-ln -sfn ~/dotfiles/zed ~/.config/zed
 ln -sfn ~/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
 ln -sfn ~/dotfiles/polybar/config.ini ~/.config/polybar/config.ini
 ln -sfn ~/dotfiles/polybar/launch.sh ~/.config/polybar/launch.sh
 ln -sfn ~/dotfiles/rofi/config.rasi ~/.config/rofi/config.rasi
 ln -sfn ~/dotfiles/.bashrc ~/.bashrc
-ln -sfn ~/dotfiles/redshift/redshift.conf ~/.config/redshift/redshift.conf
+
+# copied stuff that wont auto update
+sudo cp ~/dotfiles/redshift/redshift.conf /etc/redshift.conf
+
 
 # stuff that is only for my desktop, and not the laptop
 ln -sfn ~/dotfiles/.screenlayout/dual_monitors.sh ~/.screenlayout/dual_monitors.sh

@@ -1,6 +1,0 @@
-[Unit]
-Description=Redshift Night Mode
-
-[Service]
-Type=oneshot
-ExecStart=/usr/bin/redshift -O 4750 -b 0.9 -m randr
