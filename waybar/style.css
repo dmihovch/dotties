@@ -1,0 +1,136 @@
+/* * Pastel Forest Theme for Waybar 
+ * Colors based on deep olive-black and soft seafoam accents.
+ */
+
+@define-color forest-bg #242724;
+@define-color seafoam-accent #95bbad;
+@define-color rose-urgent #ce999a;
+@define-color cream-text #ebdbb2;
+@define-color muted-grey #a89984;
+
+* {
+    /* Font selection from your original config */
+    font-family: 'UbuntuMono Nerd Font', monospace;
+    font-size: 18px;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background-color: @forest-bg;
+    border-bottom: 2px solid @seafoam-accent;
+    color: @cream-text;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* --- Workspaces Section --- */
+
+#workspaces button {
+    padding: 0 8px;
+    background-color: transparent;
+    color: @muted-grey;
+    /* Using box-shadow instead of border to prevent text offset */
+    box-shadow: inset 0 3px transparent;
+}
+
+#workspaces button:hover {
+    background: rgba(149, 187, 173, 0.1); /* Slight seafoam tint */
+    box-shadow: inset 0 3px @seafoam-accent;
+}
+
+#workspaces button.focused {
+    background-color: transparent;
+    color: @seafoam-accent;
+    box-shadow: inset 0 3px @seafoam-accent;
+}
+
+#workspaces button.urgent {
+    background-color: @rose-urgent;
+    color: @forest-bg;
+}
+
+/* --- Modules Styling --- */
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    padding: 0 10px;
+    color: @cream-text;
+    background-color: transparent;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+/* Specific highlight for the clock/time */
+#clock {
+    color: @seafoam-accent;
+    font-weight: bold;
+}
+
+/* PulseAudio Logic */
+#pulseaudio.muted {
+    color: @muted-grey;
+}
+
+/* Battery Logic and Animation */
+#battery.charging, #battery.plugged {
+    color: @seafoam-accent;
+}
+
+#battery.critical:not(.charging) {
+    background-color: @rose-urgent;
+    color: @forest-bg;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: @forest-bg;
+        color: @rose-urgent;
+    }
+}
+
+/* --- Background Accents for Clarity --- */
+
+#cpu, #memory, #temperature {
+    border-left: 1px solid rgba(168, 153, 132, 0.2); /* Faint separator */
+}
+
+#mode {
+    background-color: @seafoam-accent;
+    color: @forest-bg;
+}
+
+#scratchpad {
+    background: rgba(235, 219, 178, 0.1);
+}
+
+#tray > .needs-attention {
+    background-color: @rose-urgent;
+}

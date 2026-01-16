@@ -1,0 +1,14 @@
+ln -sfn ~/dotfiles/.bashrc ~/.bashrc
+
+mkdir -p ~/.config/sway/
+ln -sfn ~/dotfiles/sway/config ~/.config/sway/config
+
+mkdir -p ~/.config/alacritty
+ln -sfn ~/dotfiles/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
+
+mkdir -p ~/.config/waybar/
+ln -sfn ~/dotfiles/waybar/config.jsonc ~/.config/waybar/config.jsonc
+ln -sfn ~/dotfiles/waybar/style.css ~/.config/waybar/style.css
+
+mkdir -p ~/.config/rofi/
+ln -sfn ~/dotfiles/rofi/config.rasi ~/.config/rofi/config.rasi
