@@ -171,8 +171,11 @@ exec_always --no-startup-id pkill picom; picom -b
 
 exec --no-startup-id nitrogen --restore
 
+default_border normal
 
-default_border pixel 2
+for_window [class="Alacritty"] border pixel 2
+for_window [class="firefox"] border pixel 2
+
 default_floating_border normal
 gaps inner 10
 gaps outer 5
