@@ -26,8 +26,7 @@ foreground = "0xC0CAF5"
 size = 18.0
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
-style = "SemiBold"
+family = "UbuntuMono Nerd Font"
 
 [window]
 dynamic_title = true

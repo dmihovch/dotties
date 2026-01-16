@@ -15,7 +15,7 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 # Recommends: foot
-set $term foot
+set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -31,7 +31,7 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg, jxl-pixbuf-loader
-output * bg /usr/share/backgrounds/default.jxl fill
+output * bg ~/dotfiles/wallpapers/nice-blur.jpg fill
 #
 # Example configuration:
 #
@@ -99,22 +99,12 @@ output * bg /usr/share/backgrounds/default.jxl fill
     bindsym $mod+$down focus down
     bindsym $mod+$up focus up
     bindsym $mod+$right focus right
-    # Or use $mod+[up|down|left|right]
-    bindsym $mod+Left focus left
-    bindsym $mod+Down focus down
-    bindsym $mod+Up focus up
-    bindsym $mod+Right focus right
 
     # Move the focused window with the same, but add Shift
     bindsym $mod+Shift+$left move left
     bindsym $mod+Shift+$down move down
     bindsym $mod+Shift+$up move up
     bindsym $mod+Shift+$right move right
-    # Ditto, with arrow keys
-    bindsym $mod+Shift+Left move left
-    bindsym $mod+Shift+Down move down
-    bindsym $mod+Shift+Up move up
-    bindsym $mod+Shift+Right move right
 #
 # Workspaces:
 #
@@ -148,7 +138,7 @@ output * bg /usr/share/backgrounds/default.jxl fill
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
+    bindsym $mod+semicolon splith
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
@@ -192,11 +182,6 @@ mode "resize" {
     bindsym $up resize shrink height 10px
     bindsym $right resize grow width 10px
 
-    # Ditto, with arrow keys
-	bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
 
     # Return to default mode
     bindsym Return mode "default"
@@ -210,7 +195,22 @@ bindsym $mod+r mode "resize"
 input "type:keyboard" {
     xkb_options caps:swapescape
 }
-exec --no-startup-id setxkbmap -option caps:swapescape
+
+bindsym $mod+b exec --no-startup-id firefox
+
+
+default_border pixel 2
+default_floating_border normal
+
+# Gruvbox "Pastel Forest" i3 Palette
+# class                 border  backgr. text    indicator child_border
+client.focused          #95bbad #95bbad #242724 #95bbad   #95bbad
+client.focused_inactive #3a3f3a #3a3f3a #bdae93 #3a3f3a   #3a3f3a
+client.unfocused        #242724 #242724 #7c6f64 #242724   #242724
+client.urgent           #ce999a #ce999a #242724 #ce999a   #ce999a
+client.placeholder      #242724 #242724 #ffffff #242724   #242724
+
+client.background       #242724
 
 
 # Include configs from 3 locations:
