@@ -14,6 +14,7 @@ ln -sfn ~/dotfiles/polybar/config.ini.desktop ~/.config/polybar/config.ini
 ln -sfn ~/dotfiles/polybar/launch.sh ~/.config/polybar/launch.sh
 ln -sfn ~/dotfiles/rofi/config.rasi ~/.config/rofi/config.rasi
 ln -sfn ~/dotfiles/.bashrc ~/.bashrc
+source ~/.bashrc
 ln -sfn ~/dotfiles/redshift/redshift.conf ~/.config/redshift/redshift.conf
 ln -sfn ~/dotfiles/.screenlayout/dual_monitors.sh ~/.screenlayout/dual_monitors.sh
 
