@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#thinkpad
+
+setxkbmap -option caps:swapescape
+
+mkdir -p ~/.config/i3 ~/.config/alacritty ~/.config/rofi ~/.config/picom ~/.config/nitrogen ~/.config/nvim ~/.config/polybar ~/.config/redshift
+
+ln -sfn ~/dotfiles/i3/config.laptop ~/.config/i3/config
+ln -sfn ~/dotfiles/alacritty/alacritty.toml.laptop ~/.config/alacritty/alacritty.toml
+ln -sfn ~/dotfiles/nitrogen/nitrogen.cfg ~/.config/nitrogen/nitrogen.cfg
+ln -sfn ~/dotfiles/picom/picom.conf ~/.config/picom/picom.conf
+ln -sfn ~/dotfiles/nvim/init.lua ~/.config/nvim/init.lua
+ln -sfn ~/dotfiles/polybar/config.ini ~/.config/polybar/config.ini
+ln -sfn ~/dotfiles/polybar/launch.sh ~/.config/polybar/launch.sh
+ln -sfn ~/dotfiles/rofi/config.rasi ~/.config/rofi/config.rasi
+ln -sfn ~/dotfiles/.bashrc ~/.bashrc
+ln -sfn ~/dotfiles/redshift/redshift.conf ~/.config/redshift/redshift.conf
+
+
