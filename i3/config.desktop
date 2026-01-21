@@ -161,6 +161,7 @@ bindsym $mod+r mode "resize"
  # my stuff
 
 bindsym Print exec flameshot screen
+bindsym Pause exec flameshot gui
 
 bindsym $mod+b exec --no-startup-id firefox
 

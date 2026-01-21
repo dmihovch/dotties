@@ -19,18 +19,18 @@ white = "0xC0CAF5"
 yellow = "0xE0AF68"
 
 [colors.primary]
-background = "0x000000"
+background = "0x171005"
 foreground = "0xC0CAF5"
 
 [font]
 size = 18.0
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "UbuntuMono Nerd Font"
 
 [window]
 dynamic_title = true
-opacity = 0.8
+opacity = 1
 
 [window.padding]
 x = 10
