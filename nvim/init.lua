@@ -1,3 +1,4 @@
+vim.env.KITTY_ENABLE_KBD = "0"
 --VIM OPTIONS
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -37,8 +38,7 @@ vim.o.cursorline = true
 vim.o.scrolloff = 10
 vim.o.confirm = true
 vim.opt.termguicolors = true
-
-
+-- Forces the diagnostic floating window to wrap text
 --VIM KEYMAPS
 
 
@@ -288,7 +288,7 @@ require('lazy').setup({
       -- See :help vim.diagnostic.Opts
       vim.diagnostic.config {
         severity_sort = true,
-        float = { border = 'rounded', source = 'if_many' },
+        float = { border = 'rounded', source = 'if_many', max_width = 60, },
         underline = { severity = vim.diagnostic.severity.ERROR },
         signs = vim.g.have_nerd_font and {
           text = {
@@ -387,7 +387,10 @@ require('lazy').setup({
     --- @module 'blink.cmp'
     --- @type blink.cmp.Config
     opts = {
-      keymap = {},
+      keymap = {
+		  preset = 'default',
+		  ['<C-y>'] = {},
+	  },
 
       appearance = {
         nerd_font_variant = 'mono',
