@@ -135,7 +135,7 @@ export PATH="/opt/nvim:$PATH"
 
 # aliasi
 
-alias m100-swarm ='docker run -it --rm \
+alias swarm-dev='docker run -it --rm \
   --network host \
   --privileged \
   -v $(pwd):/root/swarm_ws \
