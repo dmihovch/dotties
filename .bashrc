@@ -92,6 +92,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias v='nvim .'
+alias sqlud='sql UD_dmihovch/UD_DMIHOVCH@//54.82.190.71:1521/FREEPDB1'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -129,3 +130,18 @@ export PATH="$HOME/.nvm/versions/node/$(node -v)/bin:$PATH"
 
 
 export PATH="/opt/nvim:$PATH"
+
+
+
+# aliasi
+
+alias m100-swarm ='docker run -it --rm \
+  --network host \
+  --privileged \
+  -v $(pwd):/root/swarm_ws \
+  -v ~/.config/nvim:/root/.config/nvim:ro \
+  -e DISPLAY=$DISPLAY \
+  m100-swarm-dev'
+
+
+
