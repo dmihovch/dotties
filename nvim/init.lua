@@ -498,6 +498,13 @@ require('lazy').setup({
       modes = { insert = true, command = false, terminal = false },
     },
 },
+
+{ -- Auto close HTML tags
+    'windwp/nvim-ts-autotag',
+    event = 'InsertEnter', -- Load when entering insert mode
+    opts = {}, -- This automatically calls setup()
+},
+
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {
